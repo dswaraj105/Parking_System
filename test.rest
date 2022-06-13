@@ -1,0 +1,30 @@
+POST http://localhost:5000/create
+Content-Type: application/json
+
+{
+  "name": "Max",
+  "email": "max@gmail.com",
+  "phone": "361827198"
+}
+
+
+###
+POST http://localhost:5000/create
+Content-Type: application/json
+
+{
+  "name": "jimmy",
+  "email": "jimmy@gmail.com",
+  "phone": "361822398"
+}
+
+
+###
+POST http://localhost:5000/entry
+Content-Type: application/json
+
+{
+  "number": "MH 43 6668"
+}
+
+

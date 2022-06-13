@@ -1,0 +1,10 @@
+.User{
+  width: 500px;
+  margin: 50px auto;
+  padding: 20px 40px 10px 40px;
+  text-align: center;
+}
+
+.submit {
+  margin: 20px auto auto 0;
+}

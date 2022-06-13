@@ -14,7 +14,7 @@ const PORT = 5000;
 const app = express();
 
 // Connecting to a loca instance of mongodb
-mongoose.connect(process.env.DATABASE_URI, {
+mongoose.connect(process.env.DB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -56,23 +56,9 @@ app.use(express.json({ limit: "1mb" }));
 
 
 // Importing Routes
-// const loginRoutes = require("./routes/login");
-// const postRoutes = require("./routes/posts");
-// const snfRoutes = require('./routes/searchAndFollow');
-// const likePostRoutes = require('./routes/likePosts');
-// const commentRoutes = require('./routes/comments');
-// const profileRoutes = require('./routes/profile');
-// const statsRoutes = require('./routes/companyStats');
-// const contactusRoutes = require('./routes/contactUs');
+const routes = require("./routes/routes");
 
-// app.use(loginRoutes);
-// app.use(postRoutes);
-// app.use(snfRoutes);
-// app.use(likePostRoutes);
-// app.use(commentRoutes);
-// app.use(profileRoutes);
-// app.use(statsRoutes);
-// app.use(contactusRoutes);
+app.use(routes);
 
 
 app.get("*", (req, res, next) => {
