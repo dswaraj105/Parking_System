@@ -2,7 +2,7 @@
   width: 45%;
   max-width: 600px;
   padding: 20px;
-  height: 250px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -10,7 +10,7 @@
 }
 
 .form{
-  height: 100px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

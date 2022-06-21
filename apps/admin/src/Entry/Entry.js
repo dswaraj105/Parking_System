@@ -1,21 +1,29 @@
-// import { useState } from "react";
+import { useState } from 'react';
 
 // import TextField from '@mui/material/TextField';
+import Card from '@mui/material/Card';
 import { Container, Paper, Typography } from "@mui/material";
-// import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 
-import UserDetails from "./UserDetails/UserDetails";
+
+import UserDetails from "../components/UserDetails/UserDetails";
 import classes from './Entry.module.css';
 
 const Entry = () => {
 
-  // const [value, setValue] = useState(new Date('2014-08-18T21:11:54'));
+  const [time, setTime] = useState();
+  const [date, setDate] = useState(new Date());
 
-  // const handleChange = (newValue) => {
-  //   setValue(newValue);
-  // };
+  let timeChangedHandler = (e) => {
+    console.log(e.target.value);
 
-  return(
+  }
+
+  const dateChangedHandler = (e) => {
+    console.log(e.target.value);
+
+  }
+
+  return (
     <Container>
       <Paper elevation={3} className={classes.number} >
         <Typography variant="h3" >
@@ -23,13 +31,23 @@ const Entry = () => {
         </Typography>
       </Paper>
 
-      <div>
+      {/* <div className={classes.box}>
         <UserDetails />
-        <Paper>
-       
-        </Paper>
-      </div>
-      
+        <Card sx={{ width: 500 }}>
+
+        <label>Exit Time:</label>
+        <input type="date" name="birthday" value={date} onChange={dateChangedHandler} />
+
+        <label>Entry Time</label>
+        <input type="time" name="appt" />
+
+        </Card>
+      </div> */}
+
+      <Card>
+        
+      </Card>
+
     </Container>
   );
 };

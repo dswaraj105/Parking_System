@@ -4,3 +4,12 @@
   text-align: center;
 }
 
+.box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.timeInput{
+  width: 90%;
+  height: 40px;
+}

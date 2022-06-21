@@ -14,8 +14,8 @@ function App() {
       <NavBar></NavBar>
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="/entry" element={<EntryPage />}></Route>
-        <Route path="/user" element={<UserPage />}></Route>
+        <Route path="/entry/:carno" element={<EntryPage />}></Route>
+        <Route path="/user/:id" element={<UserPage />}></Route>
         <Route path="/checkout" element={<CheckoutPage />}></Route>
       </Routes>
     </div>
